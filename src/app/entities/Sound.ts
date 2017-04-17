@@ -1,20 +1,27 @@
 export class Sound{
 
-    private id: number;
+    public id: number;
 
     public title: string;
     public character: string;
     public description: string;
 
-    private file: string;
+    public fileUrl: string;
 
     public playing: Boolean = false;
-    public audio: Audio = null;
+    public audio = null;
 
-    play() {
+    constructor(id: number, title: string, description: string, fileUrl: string) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.fileUrl = fileUrl;
+    }
+
+    public play() {
 
         if (!this.audio) {
-            this.audio = new Audio('sounds/' + this.file);
+            this.audio = new Audio(this.fileUrl);
         }
 
         this.audio.play();

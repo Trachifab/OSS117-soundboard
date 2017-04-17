@@ -2,5 +2,12 @@
 <div class="container">
   <p class="text-center display-3 mx-auto d-block">{{title}}</p>
   <img src="assets/oss117.png" class="img-fluid mx-auto d-block" alt="">
+
+  <div class="row">
+    <div *ngFor="let sound of collection.sounds" class="col-md-3 col-sm-6 col-xs-12">
+        <button class=".btn-block btn btn-outline-primary .btn-lg" (click)="onClick(sound)">{{sound.title}}</button>
+    </div>
+  </div>
+
 </div>
 
