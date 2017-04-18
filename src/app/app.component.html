@@ -5,7 +5,7 @@
 
   <div class="row">
     <div *ngFor="let sound of collection.sounds" class="col top-margin">
-        <button class="btn btn-outline-primary" (click)="onClick(sound)">{{sound.title}}</button>
+        <button [ngClass]="{'btn-success': sound.playing === true}" class="btn btn-primary" (click)="onClick(sound)">{{sound.title}}</button>
     </div>
   </div>
 

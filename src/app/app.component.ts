@@ -32,8 +32,12 @@ export class AppComponent {
     data.map((sound) => this.collection.sounds.push(new Sound(sound.id, sound.title, sound.description, sound.fileUrl)));
   }
 
-  onClick(sound: any) {
-    this.collection.sounds.map((sound) => sound.stop());
-    sound.play();
+  onClick(sound: Sound) {
+    if(sound.playing) {
+      sound.stop();
+    } else {
+      this.collection.sounds.map((sound) => sound.stop());
+      sound.play();
+    }
   }
 }
