@@ -33,6 +33,7 @@ export class AppComponent {
   }
 
   onClick(sound: any) {
+    this.collection.sounds.map((sound) => sound.stop());
     sound.play();
   }
 }
