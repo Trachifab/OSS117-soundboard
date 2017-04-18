@@ -11,7 +11,7 @@ import {Observable} from 'rxjs/Rx';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "J'aime quand ça marche." ;
+  title = "OSS 117 Soundboard" ;
 
   data: Sound[];
 
